@@ -1,6 +1,6 @@
 {
   "name": "sound-to-array",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "🔊 Naive and simple way to get an array representing sound frequency (from 0-255)",
   "main": "index.js",
   "keywords": [],

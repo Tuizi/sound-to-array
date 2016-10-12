@@ -1,5 +1,5 @@
 class SoundToArray {
-    constructor(fftSize) {
+    constructor() {
         this.audioContext = new window.AudioContext();
         this.analyser = this.audioContext.createAnalyser();
     }

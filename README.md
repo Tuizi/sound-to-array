@@ -1,2 +1,2 @@
-# sound2array
-Naive and simple way to get an array representing sound frequency (from 0 ➡️ 255)
+# sound-to-array
+Convert the sound comming from your sound input (microphone, stereo mix, etc...) to an array.

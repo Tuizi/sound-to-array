@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Sound to array</title>
+</head>
+
+<body>
+
+    <textarea name="" id="textArea" cols="64" rows="1"></textarea>
+
+    <script src="../sound-to-array.js"></script>
+    <script>
+        const sta = new SoudToArray(),
+        textAreaElement = document.querySelector("#textArea");
+
+        function updateData() {
+            const data = sta.data().next();
+            textAreaElement.value = data.value.join();
+
+            window.requestAnimationFrame(updateData);
+        }
+
+        sta.setup().then(()=> {
+            updateData();
+        })
+    </script>
+</body>
+
+</html>

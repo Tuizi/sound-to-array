@@ -5,17 +5,15 @@
 </head>
 
 <body>
-
-    <textarea name="" id="textArea" cols="128" rows="4"></textarea>
-
+    <span id="output"></span>
     <script src="../sound-to-array.js"></script>
     <script>
         const sta = new SoundToArray(),
-        textAreaElement = document.querySelector("#textArea");
+        outputElement = document.querySelector("#output");
 
         function updateData() {
             const data = sta.data().next();
-            textAreaElement.value = data.value.join();
+            outputElement.textContent = data.value.join();
 
             window.requestAnimationFrame(updateData);
         }

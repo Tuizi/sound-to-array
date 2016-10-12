@@ -5,11 +5,11 @@ class SoundToArray {
     }
 
     set fftSize(size) {
-        context.analyser.fftSize = size;
+        this.analyser.fftSize = size;
     }
 
     get fftSize() {
-        return context.analyser.fftSize;
+        return this.analyser.fftSize;
     }
 
     setup(fftSize) {
@@ -30,7 +30,7 @@ class SoundToArray {
                     resolve();
                 },
                 (err) => {
-                    reject('User media error occured: ' + err.name + ' ' + err.message);
+                    reject('User media error occurred: ' + err.name + ' ' + err.message);
                 });
         });
     }

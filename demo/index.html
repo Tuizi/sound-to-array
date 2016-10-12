@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Sound to array</title>
+</head>
+
+<body>
+    <span id="output"></span>
+    <script src="../sound-to-array.js"></script>
+    <script>
+        const sta = new SoundToArray(),
+        outputElement = document.querySelector("#output");
+
+        function updateData() {
+            const data = sta.data().next();
+            outputElement.textContent = data.value.join();
+
+            window.requestAnimationFrame(updateData);
+        }
+
+        sta.setup().then(()=> {
+            updateData();
+        })
+    </script>
+</body>
+
+</html>
